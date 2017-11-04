@@ -38,14 +38,166 @@
                         </div>
                     </div>
                 </div>
-
+                <style>
+                    div.results table tbody td{
+                        padding:4px;
+                    }
+                    div.results table tbody td:first-child img{
+                        max-height:100px;
+                    }
+                    div.results table tbody td:first-child{
+                        width: 80px;
+                    }
+                    div.results table tbody h1,
+                    div.results table tbody h2,
+                    div.results table tbody h3,
+                    div.results table tbody h4{
+                        padding-top:0;
+                        margin-top:0;
+                        margin-bottom:0;
+                        padding-bottom:0;
+                        font-weight:bold;
+                    }
+                </style>
                 <div class="results col-md-10 col-md-offset-1">
                     <div class="row">
                         {% if not results %}
-                            <p>
-                                No results!
-                            </p>
+                        <div class="table-responsive">
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            Poster
+                                        </th>
+                                        <th>Info</th>
+                                        <th>Last Name</th>
+                                        <th>Email</th>
+                                        <th>Plot</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><img src="https://image.tmdb.org/t/p/w320/yeJPtZlChYGoCVmvYIrjAeQII7R.jpg"/></td>
+                                        <td>
+                                            <h4>Je mtest versie</h4>
+                                            <span>Director: <a href="">Quentin Tarintino</a></span><br>
+                                            <span>Actors:
+                                                <a href="#">Blaat Ellre</a>,
+                                                <a href="#">Xoopem EKFoegns</a>,
+                                                <a href="#">Alexander Misarouve (I)</a>
+                                            </span><br>
+                                        </td>
+                                        <td>
+                                            Director: test
+                                        </td>
+                                        <td>johncarter@mail.com</td>
+                                        <td>Lorem ipsum dolor sit amet…</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>Peter</td>
+                                        <td>Parker</td>
+                                        <td>peterparker@mail.com</td>
+                                        <td>Vestibulum consectetur scelerisque…</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <style>
+                                div.overview{
+                                    border: 1px solid red;
+                                    overflow: hidden;
+                                }
+                                div.overview h1,
+                                div.overview h2,
+                                div.overview h3,
+                                div.overview h4{
+                                    padding-top:0;
+                                    margin-top:0;
+                                    margin-bottom:0;
+                                    padding-bottom:0;
+                                    font-weight:bold;
+                                }
+                                div.overview>div.item{
+                                    float:left;
+                                    width:50%;
+                                    border:1px solid green;
+                                }
+                                div.overview>div.item>div{
+                                    float:left;
+                                }
+                                div.overview>div.item>div.poster{
+                                    width:20%;
+                                    height:160px;
+                                    background-size:cover;
+                                    background-repeat: no-repeat;
+
+                                }
+                                div.overview>div.item>div.info{
+                                    width:80%;
+                                    padding-left:6px;
+                                    padding-right:6px;
+                                }
+                                div.overview>div.item>div.info>div.title_container{
+                                    overflow:hidden;
+                                    border-bottom:1px solid #e0e0e0;
+                                }
+                                div.overview>div.item>div.info>div.title_container>.title{
+                                    float:left;
+                                    width:80%;
+                                    font-weight:bold;
+                                    font-size:16px;
+                                    padding-bottom:2px;
+                                    line-height: 18px;
+                                }
+                                div.overview span.year_release{
+                                    font-size:12px;
+                                    color: darkgrey;
+                                }
+                                div.overview>div.item>div.info>div.title_container>.rating{
+                                    width:20%;
+                                    float:left;
+                                    text-align:right;
+                                }
+                                div.overview>div.item span.people{
+                                    display:block;
+                                    margin-top:6px;
+                                }
+                                div.overview>div.item span.synopsis{
+                                    margin-top:6px;
+                                    color: #505050;
+                                    display: block;
+                                }
+                            </style>
+                            <div class="overview">
+                                <div class="item">
+                                    <div class="poster" style="background-image: url('https://image.tmdb.org/t/p/w320/yeJPtZlChYGoCVmvYIrjAeQII7R.jpg')"></div>
+                                    <div class="info">
+                                        <div class="title_container">
+                                            <div class="title">
+                                                Coole film met een hele lange titel ej lange titel <span class="year_release">- 2007</span>
+                                            </div>
+                                            <div class="rating">
+                                                *******
+                                            </div>
+                                        </div>
+
+                                        <span class="people">
+                                            <a href="">Quentin Tarintino</a> |
+                                            <a href="#">Blaat Ellre</a>,
+                                            <a href="#">Xoopem EKFoegns</a>,
+                                            <a href="#">Alexander Misarouve (I)</a>
+                                        </span>
+
+                                        <span class="synopsis">
+                                            "Follows teenager Clay Jensen, in his quest to uncover the story behind his classmate and crush, Hannah, and her decision to end her life."
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         {% endif %}
+
                         {% for result in results %}
                         <div class="col-md-4 no-padding">
                             <div class="panel panel-default">
