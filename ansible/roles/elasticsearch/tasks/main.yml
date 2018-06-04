@@ -41,10 +41,10 @@
   ignore_errors: yes
 
 - name: installing zombodb
-  expect:
-    command: /usr/share/elasticsearch/bin/elasticsearch-plugin install file:///tmp/zombodb-es-plugin-5.6.4-1.0.0.zip
-    responses:
-      'y/N' : 'y'
+  shell:
+    cmd: /usr/share/elasticsearch/bin/elasticsearch-plugin install --batch file:///tmp/zombodb-es-plugin-5.6.4-1.0.0.zip
+  args:
+    executable: /bin/bash
   become_user: root
   ignore_errors: yes
   notify:
