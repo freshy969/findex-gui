@@ -103,7 +103,7 @@ class Extended(object):
 
 
 def pip_freeze():
-    from pip.operations import freeze
+    from pip._internal.operations import freeze
     _packages = freeze.freeze()
     packages = []
     for _package in _packages:

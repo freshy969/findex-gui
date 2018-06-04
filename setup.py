@@ -120,7 +120,8 @@ do_setup(
         "python-dateutil",
         "unidecode",
         "gunicorn",
-        "psycogreen"
+        "psycogreen",
+        "pip>=10"
     ],
     setup_requires=[
         "pytest-runner",
